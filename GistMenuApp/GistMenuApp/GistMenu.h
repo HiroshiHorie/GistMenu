@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface GistMenu : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+
+@property (strong, readonly) NSStatusItem *statusItem;
+@property (strong, readonly) NSMenu *statusMenu;
 
 @end

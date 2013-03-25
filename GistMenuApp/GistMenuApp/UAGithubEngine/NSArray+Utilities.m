@@ -16,7 +16,7 @@
 {
     if ([self count] > 0)
     {
-        return [self objectAtIndex:0];
+        return self[0];
     }
     return nil;
 }
@@ -24,7 +24,7 @@
 
 - (NSArray *)sortedWithKey:(NSString *)theKey ascending:(BOOL)ascending 
 {
-    return [self sortedArrayUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:theKey ascending:ascending selector:@selector(caseInsensitiveCompare:)]]];
+    return [self sortedArrayUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:theKey ascending:ascending selector:@selector(caseInsensitiveCompare:)]]];
 }
 
 

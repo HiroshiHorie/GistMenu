@@ -10,21 +10,23 @@
 		68EE5F6617005C4600A86B45 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EE5F6517005C4600A86B45 /* Cocoa.framework */; };
 		68EE5F7017005C4600A86B45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68EE5F6E17005C4600A86B45 /* InfoPlist.strings */; };
 		68EE5F7217005C4600A86B45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F7117005C4600A86B45 /* main.m */; };
-		68EE5F7617005C4600A86B45 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 68EE5F7417005C4600A86B45 /* Credits.rtf */; };
-		68EE5F7917005C4600A86B45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F7817005C4600A86B45 /* AppDelegate.m */; };
-		68EE5F7C17005C4600A86B45 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68EE5F7A17005C4600A86B45 /* MainMenu.xib */; };
+		68EE5F7917005C4600A86B45 /* GistMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F7817005C4600A86B45 /* GistMenu.m */; };
 		68EE5F9C17005C7E00A86B45 /* NSArray+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F8617005C7E00A86B45 /* NSArray+Utilities.m */; };
 		68EE5F9D17005C7E00A86B45 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F8817005C7E00A86B45 /* NSData+Base64.m */; };
 		68EE5F9E17005C7E00A86B45 /* NSInvocation+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F8A17005C7E00A86B45 /* NSInvocation+Blocks.m */; };
 		68EE5F9F17005C7E00A86B45 /* NSString+UAGithubEngineUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F8C17005C7E00A86B45 /* NSString+UAGithubEngineUtilities.m */; };
 		68EE5FA017005C7E00A86B45 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F8E17005C7E00A86B45 /* NSString+UUID.m */; };
-		68EE5FA117005C7E00A86B45 /* UAGithubEngine-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68EE5F8F17005C7E00A86B45 /* UAGithubEngine-Info.plist */; };
 		68EE5FA217005C7E00A86B45 /* UAGithubEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F9217005C7E00A86B45 /* UAGithubEngine.m */; };
 		68EE5FA317005C7E00A86B45 /* UAGithubEngineConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F9417005C7E00A86B45 /* UAGithubEngineConstants.m */; };
 		68EE5FA417005C7E00A86B45 /* UAGithubJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F9717005C7E00A86B45 /* UAGithubJSONParser.m */; };
 		68EE5FA517005C7E00A86B45 /* UAGithubURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F9917005C7E00A86B45 /* UAGithubURLConnection.m */; };
 		68EE5FA617005C7E00A86B45 /* UAReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F9B17005C7E00A86B45 /* UAReachability.m */; };
 		68EE5FA817005C8D00A86B45 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EE5FA717005C8D00A86B45 /* SystemConfiguration.framework */; };
+		68EE5FB11700996700A86B45 /* status-item@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68EE5FAF1700996700A86B45 /* status-item@2x.png */; };
+		68EE5FB51700A01000A86B45 /* icon-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68EE5FB31700A01000A86B45 /* icon-gear@2x.png */; };
+		68EE5FB81700A3B800A86B45 /* icon-code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68EE5FB61700A3B800A86B45 /* icon-code@2x.png */; };
+		68EE5FB91700A3B800A86B45 /* icon-exit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68EE5FB71700A3B800A86B45 /* icon-exit@2x.png */; };
+		68EE5FBC1700A77B00A86B45 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68EE5FBE1700A77B00A86B45 /* Window.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +39,8 @@
 		68EE5F6F17005C4600A86B45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		68EE5F7117005C4600A86B45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68EE5F7317005C4600A86B45 /* GistMenuApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GistMenuApp-Prefix.pch"; sourceTree = "<group>"; };
-		68EE5F7517005C4600A86B45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		68EE5F7717005C4600A86B45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		68EE5F7817005C4600A86B45 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		68EE5F7B17005C4600A86B45 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		68EE5F7717005C4600A86B45 /* GistMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GistMenu.h; sourceTree = "<group>"; };
+		68EE5F7817005C4600A86B45 /* GistMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GistMenu.m; sourceTree = "<group>"; };
 		68EE5F8517005C7E00A86B45 /* NSArray+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Utilities.h"; sourceTree = "<group>"; };
 		68EE5F8617005C7E00A86B45 /* NSArray+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Utilities.m"; sourceTree = "<group>"; };
 		68EE5F8717005C7E00A86B45 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -51,7 +51,6 @@
 		68EE5F8C17005C7E00A86B45 /* NSString+UAGithubEngineUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UAGithubEngineUtilities.m"; sourceTree = "<group>"; };
 		68EE5F8D17005C7E00A86B45 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
 		68EE5F8E17005C7E00A86B45 /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
-		68EE5F8F17005C7E00A86B45 /* UAGithubEngine-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UAGithubEngine-Info.plist"; sourceTree = "<group>"; };
 		68EE5F9017005C7E00A86B45 /* UAGithubEngine-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UAGithubEngine-Prefix.pch"; sourceTree = "<group>"; };
 		68EE5F9117005C7E00A86B45 /* UAGithubEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAGithubEngine.h; sourceTree = "<group>"; };
 		68EE5F9217005C7E00A86B45 /* UAGithubEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAGithubEngine.m; sourceTree = "<group>"; };
@@ -65,6 +64,11 @@
 		68EE5F9A17005C7E00A86B45 /* UAReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAReachability.h; sourceTree = "<group>"; };
 		68EE5F9B17005C7E00A86B45 /* UAReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAReachability.m; sourceTree = "<group>"; };
 		68EE5FA717005C8D00A86B45 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		68EE5FAF1700996700A86B45 /* status-item@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-item@2x.png"; sourceTree = "<group>"; };
+		68EE5FB31700A01000A86B45 /* icon-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-gear@2x.png"; sourceTree = "<group>"; };
+		68EE5FB61700A3B800A86B45 /* icon-code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-code@2x.png"; sourceTree = "<group>"; };
+		68EE5FB71700A3B800A86B45 /* icon-exit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-exit@2x.png"; sourceTree = "<group>"; };
+		68EE5FBD1700A77B00A86B45 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Window.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +125,9 @@
 		68EE5F6B17005C4600A86B45 /* GistMenuApp */ = {
 			isa = PBXGroup;
 			children = (
-				68EE5F7717005C4600A86B45 /* AppDelegate.h */,
-				68EE5F7817005C4600A86B45 /* AppDelegate.m */,
-				68EE5F7A17005C4600A86B45 /* MainMenu.xib */,
+				68EE5F7717005C4600A86B45 /* GistMenu.h */,
+				68EE5F7817005C4600A86B45 /* GistMenu.m */,
+				68EE5FA9170096B500A86B45 /* Icons */,
 				68EE5F6C17005C4600A86B45 /* Supporting Files */,
 			);
 			path = GistMenuApp;
@@ -136,7 +140,7 @@
 				68EE5F6E17005C4600A86B45 /* InfoPlist.strings */,
 				68EE5F7117005C4600A86B45 /* main.m */,
 				68EE5F7317005C4600A86B45 /* GistMenuApp-Prefix.pch */,
-				68EE5F7417005C4600A86B45 /* Credits.rtf */,
+				68EE5FBE1700A77B00A86B45 /* Window.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,7 +158,6 @@
 				68EE5F8C17005C7E00A86B45 /* NSString+UAGithubEngineUtilities.m */,
 				68EE5F8D17005C7E00A86B45 /* NSString+UUID.h */,
 				68EE5F8E17005C7E00A86B45 /* NSString+UUID.m */,
-				68EE5F8F17005C7E00A86B45 /* UAGithubEngine-Info.plist */,
 				68EE5F9017005C7E00A86B45 /* UAGithubEngine-Prefix.pch */,
 				68EE5F9117005C7E00A86B45 /* UAGithubEngine.h */,
 				68EE5F9217005C7E00A86B45 /* UAGithubEngine.m */,
@@ -170,6 +173,17 @@
 			);
 			name = UAGithubEngine;
 			path = GistMenuApp/UAGithubEngine;
+			sourceTree = "<group>";
+		};
+		68EE5FA9170096B500A86B45 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				68EE5FAF1700996700A86B45 /* status-item@2x.png */,
+				68EE5FB31700A01000A86B45 /* icon-gear@2x.png */,
+				68EE5FB61700A3B800A86B45 /* icon-code@2x.png */,
+				68EE5FB71700A3B800A86B45 /* icon-exit@2x.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,9 +238,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				68EE5F7017005C4600A86B45 /* InfoPlist.strings in Resources */,
-				68EE5F7617005C4600A86B45 /* Credits.rtf in Resources */,
-				68EE5F7C17005C4600A86B45 /* MainMenu.xib in Resources */,
-				68EE5FA117005C7E00A86B45 /* UAGithubEngine-Info.plist in Resources */,
+				68EE5FB11700996700A86B45 /* status-item@2x.png in Resources */,
+				68EE5FB51700A01000A86B45 /* icon-gear@2x.png in Resources */,
+				68EE5FB81700A3B800A86B45 /* icon-code@2x.png in Resources */,
+				68EE5FB91700A3B800A86B45 /* icon-exit@2x.png in Resources */,
+				68EE5FBC1700A77B00A86B45 /* Window.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68EE5F7217005C4600A86B45 /* main.m in Sources */,
-				68EE5F7917005C4600A86B45 /* AppDelegate.m in Sources */,
+				68EE5F7917005C4600A86B45 /* GistMenu.m in Sources */,
 				68EE5F9C17005C7E00A86B45 /* NSArray+Utilities.m in Sources */,
 				68EE5F9D17005C7E00A86B45 /* NSData+Base64.m in Sources */,
 				68EE5F9E17005C7E00A86B45 /* NSInvocation+Blocks.m in Sources */,
@@ -263,20 +279,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		68EE5F7417005C4600A86B45 /* Credits.rtf */ = {
+		68EE5FBE1700A77B00A86B45 /* Window.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				68EE5F7517005C4600A86B45 /* en */,
+				68EE5FBD1700A77B00A86B45 /* en */,
 			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		68EE5F7A17005C4600A86B45 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				68EE5F7B17005C4600A86B45 /* en */,
-			);
-			name = MainMenu.xib;
+			name = Window.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -263,7 +263,7 @@
                                     
                                     if ([[[resp allHeaderFields] allKeys] containsObject:@"X-Ratelimit-Remaining"] && [[[resp allHeaderFields] valueForKey:@"X-Ratelimit-Remaining"] isEqualToString:@"1"])
                                     {         
-                                        blockError = [NSError errorWithDomain:UAGithubAPILimitReached code:statusCode userInfo:[NSDictionary dictionaryWithObject:urlRequest forKey:@"request"]];
+                                        blockError = [NSError errorWithDomain:UAGithubAPILimitReached code:statusCode userInfo:@{@"request": urlRequest}];
                                         return (id)[NSNull null];
                                     }
                                     
@@ -279,7 +279,7 @@
                                                 case UAGithubTeamMembershipStatusRequest:
                                                 case UAGithubTeamRepositoryManagershipStatusRequest:
                                                 {
-                                                    return (id)[NSNumber numberWithBool:NO];
+                                                    return (id)@NO;
                                                 }
                                                     break;
                                                 default:
@@ -287,7 +287,7 @@
                                             }
                                         }
                                         
-                                        blockError = [NSError errorWithDomain:@"HTTP" code:statusCode userInfo:[NSDictionary dictionaryWithObject:urlRequest forKey:@"request"]];
+                                        blockError = [NSError errorWithDomain:@"HTTP" code:statusCode userInfo:@{@"request": urlRequest}];
                                         
                                         return (id)[NSNull null];
                                                                                 
@@ -295,7 +295,7 @@
                                     
                                     else if (statusCode == 204)
                                     {
-                                        return (id)[NSNumber numberWithBool:YES];
+                                        return (id)@YES;
                                     }
                                     else if (requestType == UAGithubMarkdownRequest)
                                     {
@@ -645,7 +645,7 @@
 
 - (void)addComment:(NSString *)comment toIssue:(NSInteger)issueNumber forRepository:(NSString *)repositoryPath success:(UAGithubEngineSuccessBlock)successBlock failure:(UAGithubEngineFailureBlock)failureBlock
 {
-	NSDictionary *commentDictionary = [NSDictionary dictionaryWithObject:comment forKey:@"body"];
+	NSDictionary *commentDictionary = @{@"body": comment};
 	[self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"repos/%@/issues/%ld/comments", repositoryPath, issueNumber] requestType:UAGithubIssueCommentAddRequest responseType:UAGithubIssueCommentResponse withParameters:commentDictionary error:nil];} success:successBlock failure:failureBlock];
 	
 }
@@ -653,7 +653,7 @@
 
 - (void)editComment:(NSInteger)commentNumber forRepository:(NSString *)repositoryPath withBody:(NSString *)commentBody success:(UAGithubEngineSuccessBlock)successBlock failure:(UAGithubEngineFailureBlock)failureBlock
 {
-    NSDictionary *commentDictionary = [NSDictionary dictionaryWithObject:commentBody forKey:@"body"];
+    NSDictionary *commentDictionary = @{@"body": commentBody};
     [self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"repos/%@/issues/comments/%ld", repositoryPath, commentNumber] requestType:UAGithubIssueCommentEditRequest responseType:UAGithubIssueCommentResponse withParameters:commentDictionary error:nil];} success:successBlock failure:failureBlock];
 }
 
@@ -1277,7 +1277,7 @@
 {
     if (org)
     {
-        [self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"repos/%@/forks", repositoryPath] requestType:UAGithubRepositoryForkRequest responseType:UAGithubRepositoryResponse withParameters:[NSDictionary dictionaryWithObject:org forKey:@"org"] error:nil];} success:successBlock failure:failureBlock];
+        [self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"repos/%@/forks", repositoryPath] requestType:UAGithubRepositoryForkRequest responseType:UAGithubRepositoryResponse withParameters:@{@"org": org} error:nil];} success:successBlock failure:failureBlock];
     }
 	[self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"repos/%@/forks", repositoryPath] requestType:UAGithubRepositoryForkRequest responseType:UAGithubRepositoryResponse error:nil];} success:successBlock failure:failureBlock];
 }
@@ -1305,7 +1305,7 @@
 
 - (void)addDeployKey:(NSString *)keyData withTitle:(NSString *)keyTitle ToRepository:(NSString *)repositoryName success:(UAGithubEngineSuccessBlock)successBlock failure:(UAGithubEngineFailureBlock)failureBlock
 {
-	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:keyData, @"key", keyTitle, @"title", nil];
+	NSDictionary *params = @{@"key": keyData, @"title": keyTitle};
 	[self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"repos/%@/keys", repositoryName] requestType:UAGithubDeployKeyAddRequest responseType:UAGithubDeployKeysResponse withParameters:params error:nil];} success:successBlock failure:failureBlock];
     
 }

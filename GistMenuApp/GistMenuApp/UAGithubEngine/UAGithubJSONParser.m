@@ -14,7 +14,7 @@
 
 + (id)parseJSON:(NSData *)theJSON error:(NSError **)error;
 {
-    NSArray *dateElements = [NSArray arrayWithObjects:@"created_at", @"updated_at", @"closed_at", @"due_on", @"pushed_at", @"committed_at", @"merged_at", @"date", @"expirationdate", nil];
+    NSArray *dateElements = @[@"created_at", @"updated_at", @"closed_at", @"due_on", @"pushed_at", @"committed_at", @"merged_at", @"date", @"expirationdate"];
     NSMutableArray *jsonArray;
     id jsonObj = [NSJSONSerialization JSONObjectWithData:theJSON options:NSJSONReadingMutableLeaves|NSJSONReadingMutableContainers|NSJSONReadingAllowFragments error:error];
     
@@ -25,7 +25,7 @@
         if ([[[jsonArray firstObject] allKeys] containsObject:@"error"])
         {
             NSDictionary *dictionary = [jsonArray firstObject];
-            *error = [NSError errorWithDomain:@"UAGithubEngineGithubError" code:0 userInfo:[NSDictionary dictionaryWithObject:[dictionary objectForKey:@"error"] forKey:@"errorMessage"]];
+            *error = [NSError errorWithDomain:@"UAGithubEngineGithubError" code:0 userInfo:@{@"errorMessage": dictionary[@"error"]}];
             NSLog(@"Error: %@", *error);
         }
         
@@ -35,10 +35,10 @@
 			for (NSString *keyString in dateElements)
 			{
 				if ([keys containsObject:keyString]) {
-                    NSDate *date = [[theDictionary objectForKey:keyString] dateFromGithubDateString];
+                    NSDate *date = [theDictionary[keyString] dateFromGithubDateString];
                     if (date != nil) 
                     {
-                        [theDictionary setObject:date forKey:keyString];
+                        theDictionary[keyString] = date;
                     }
 				}
 			}
