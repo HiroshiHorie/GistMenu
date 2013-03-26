@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68E8001A170165420053F222 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E80019170165420053F222 /* ViewController.m */; };
+		68E8001D1701664A0053F222 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E8001C1701664A0053F222 /* Window.xib */; };
 		68EE5F6617005C4600A86B45 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EE5F6517005C4600A86B45 /* Cocoa.framework */; };
 		68EE5F7017005C4600A86B45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68EE5F6E17005C4600A86B45 /* InfoPlist.strings */; };
 		68EE5F7217005C4600A86B45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EE5F7117005C4600A86B45 /* main.m */; };
@@ -29,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68E80018170165420053F222 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		68E80019170165420053F222 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		68E8001C1701664A0053F222 /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
 		68EE5F6217005C4600A86B45 /* GistMenuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GistMenuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68EE5F6517005C4600A86B45 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		68EE5F6817005C4600A86B45 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -82,6 +87,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68E8001B1701660D0053F222 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				68E8001C1701664A0053F222 /* Window.xib */,
+				68E80018170165420053F222 /* ViewController.h */,
+				68E80019170165420053F222 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		68EE5F5917005C4600A86B45 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +140,7 @@
 			children = (
 				68EE5F7717005C4600A86B45 /* GistMenu.h */,
 				68EE5F7817005C4600A86B45 /* GistMenu.m */,
+				68E8001B1701660D0053F222 /* Controllers */,
 				68EE5FA9170096B500A86B45 /* Icons */,
 				68EE5F6C17005C4600A86B45 /* Supporting Files */,
 			);
@@ -239,6 +255,7 @@
 				68EE5FB51700A01000A86B45 /* icon-gear@2x.png in Resources */,
 				68EE5FB81700A3B800A86B45 /* icon-code@2x.png in Resources */,
 				68EE5FB91700A3B800A86B45 /* icon-exit@2x.png in Resources */,
+				68E8001D1701664A0053F222 /* Window.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +278,7 @@
 				68EE5FA417005C7E00A86B45 /* UAGithubJSONParser.m in Sources */,
 				68EE5FA517005C7E00A86B45 /* UAGithubURLConnection.m in Sources */,
 				68EE5FA617005C7E00A86B45 /* UAReachability.m in Sources */,
+				68E8001A170165420053F222 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

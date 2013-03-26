@@ -9,6 +9,8 @@
 #import "GistMenu.h"
 #import "UAGithubEngine.h"
 
+#import "ViewController.h"
+
 @implementation GistMenu
 
 - (id)init {
@@ -50,6 +52,9 @@
 
     menuItem = [_statusMenu addItemWithTitle:NSLocalizedString(@"Quit", nil) action:@selector(quitAction:) keyEquivalent:@""];
     [menuItem setImage:exitImage];
+    
+    ViewController *controller = [[ViewController alloc] initWithNibName:@"Window" bundle:[NSBundle mainBundle]];
+    
 
 }
 
