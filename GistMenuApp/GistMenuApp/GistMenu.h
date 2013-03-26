@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface GistMenu : NSObject <NSApplicationDelegate>
+@interface GistMenu : NSObject<NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 

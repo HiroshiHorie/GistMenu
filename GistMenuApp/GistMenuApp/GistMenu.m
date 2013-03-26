@@ -11,6 +11,14 @@
 
 @implementation GistMenu
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        NSLog(@"app");
+    }
+    return self;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
 
